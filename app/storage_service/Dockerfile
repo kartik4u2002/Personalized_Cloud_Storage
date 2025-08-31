@@ -1,20 +1,23 @@
-#Use the official Python 3.9 image as the base image
-FROM python:3.9-slim-buster
+# Base image
+FROM python:3.11-slim
 
-#Set the working directory in the container
-WORKDIR /app
+# Set workdir
+WORKDIR /storage_service
 
-#Copy the requirements file into the working directory
+# Copy only requirements first (for caching dependencies)
 COPY requirements.txt .
 
-#Install the dependencies
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-#Copy the application code into the working directory
-COPY app.py .
+# Copy the app code into the image
+COPY . .
 
-#Expose port 5000, as Flask runs on this port by default
+# Create uploads folder
+RUN mkdir uploads
+
+# Expose port
 EXPOSE 5000
 
-#Command to run the application
+# Run app
 CMD ["python", "app.py"]

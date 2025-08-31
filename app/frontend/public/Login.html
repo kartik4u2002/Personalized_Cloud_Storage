@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>FileHub - Login</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer type="text/javascript" src="./js/main.js"></script>
+</head>
+
+<body class="bg-[#122118] text-white" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+
+    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden dark group/design-root">
+        <div class="flex flex-col lg:flex-row h-screen">
+            
+            <!-- Left Panel -->
+            <div class="lg:w-1/2 flex flex-col justify-center items-center p-8 lg:p-16 bg-gradient-to-br from-[#122118] to-[#0a120e]">
+                <div class="w-full max-w-md space-y-8">
+                    
+                    <div class="text-center">
+                        <h1 class="text-4xl font-bold tracking-tighter">Welcome Back</h1>
+                        <p class="mt-2 text-lg text-[#96c5a9]">Sign in to access your personalized storage.</p>
+                    </div>
+
+                    <!-- ✅ Login Form -->
+                    <form id="loginForm" class="space-y-6" method="POST" action="#">
+                        
+                        <!-- Email Field -->
+                        <div>
+                            <label class="sr-only" for="email">Username or Email</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#96c5a9]">person</span>
+                                <input type="text" autocomplete="email"
+                                    class="form-input w-full rounded-full border-2 border-[#264532] bg-[#1a3225] h-14 pl-12 pr-4 text-base placeholder:text-[#96c5a9] focus:border-[#38e07b] focus:ring-[#38e07b] transition-colors duration-300"
+                                    id="email" name="email" placeholder="Username or Email" required type="email" />
+                            </div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div>
+                            <label class="sr-only" for="password">Password</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#96c5a9]">lock</span>
+                                <input type="password"autocomplete="current-password"
+                                    class="form-input w-full rounded-full border-2 border-[#264532] bg-[#1a3225] h-14 pl-12 pr-4 text-base placeholder:text-[#96c5a9] focus:border-[#38e07b] focus:ring-[#38e07b] transition-colors duration-300"
+                                    id="password" name="password" placeholder="Password" required type="password" />
+                            </div>
+                        </div>
+
+                        <!-- Forgot Password -->
+                        <div class="flex items-center justify-end">
+                            <a class="text-sm font-medium text-[#96c5a9] hover:text-[#38e07b] transition-colors duration-300"
+                                href="#">Forgot Password?</a>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit"
+                                class="flex w-full items-center justify-center rounded-full h-14 px-5 bg-[#38e07b] text-[#122118] text-base font-bold tracking-[0.015em] hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                                Login
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Sign Up Redirect -->
+                    <div class="text-center text-[#96c5a9]">
+                        <p>Don't have an account? 
+                            <a id="goSignup" class="font-bold text-[#38e07b] hover:underline" href="#">Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="hidden lg:flex lg:w-1/2 bg-cover bg-center"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv2KuaZBdic6b3Vs9dvdNkGS3NB3rJSgXv8IQI2S8Q1fn2jWmvfV-yHazk0rEAq0gt-QMH6OMb8TmbfBiXE1abHO1txqckQcitfiM--UeMxCcX6eZdctM1qSG32U-yASs_O0mzyBAKvvILbijG8OYMVqOzeXI908sSH8EqVJsm4u3J_lEKje8pcwtU7pher_uB6Un64X14Pn5EMrYS0bU9GVe8aOhyzvyZBQiOXQLt8blRFspswKJial34zLP2nL9hxm9m8-LlJX4');">
+                <div class="w-full h-full bg-black bg-opacity-50 flex items-center justify-center p-16">
+                    <div class="text-center">
+                        <div class="inline-block p-4 bg-[#38e07b] rounded-full mb-6">
+                            <svg class="size-10 text-[#122118]" fill="none" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-5xl font-bold mb-4 tracking-tight">FileHub</h2>
+                        <p class="text-xl text-[#96c5a9]">Your Secure & Personalized File Sanctuary</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

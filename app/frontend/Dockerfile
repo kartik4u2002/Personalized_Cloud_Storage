@@ -1,20 +1,19 @@
-#Use the official Python 3.9 image as the base image
-FROM python:3.9-slim-buster
+# Use official Node.js image
+FROM node:20-alpine
 
-#Set the working directory in the container
-WORKDIR /app
+# Create app directory
+WORKDIR /frontend
 
-#Copy the requirements file into the working directory
-COPY requirements.txt .
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-#Install the dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies
+RUN npm install
 
-#Copy the application code into the working directory
-COPY app.py .
+# Copy all frontend files
 
-#Expose port 5000, as Flask runs on this port by default
-EXPOSE 5000
+# Expose port
+EXPOSE 3000
 
-#Command to run the application
-CMD ["python", "app.py"]
+# Start the server
+CMD ["node", "server.js"]
