@@ -22,5 +22,10 @@ A **smart cloud storage system** that organizes, categorizes, and searches your 
 - **DevOps**: Docker & Docker Compose
 <img width="1600" height="1000" alt="screen" src="https://github.com/user-attachments/assets/4e64af42-157c-4981-b6c0-34c62bb20d6b" />
 
+<img width="1600" height="1000" alt="screen" src="https://github.com/user-attachments/assets/9ceb5951-81c1-4cf3-92f5-8bd7fbc0e4b3" />
+
+<img width="1600" height="1309" alt="screen" src="https://github.com/user-attachments/assets/96e7ef50-1aab-4f09-938e-f5517d23d29b" />
+
+
 
 
